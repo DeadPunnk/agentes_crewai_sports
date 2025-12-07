@@ -1,4 +1,10 @@
 import requests
+import pandas as pd 
+import os 
+
+load_dotenv()
+
+api_key = os.getenv('API_SPORTS_KEY')
 
 # URL do endpoint de Classificação (Standings)
 # O ID da liga 71 é comumente associado à Série A do Brasil.
@@ -11,7 +17,7 @@ querystring = {"league":"71","season":"2023"} # Altere o ano conforme necessári
 
 payload={}
 headers = {
-  'x-apisports-key': 'ec42956ece2af22d71dd387ecc06a565',
+  'x-apisports-key': api_key,
 }
 
 # A requisição agora usa os parâmetros
