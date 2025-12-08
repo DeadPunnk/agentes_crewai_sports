@@ -3,7 +3,9 @@ from bs4 import BeautifulSoup
 import pandas as pd
 # Script para coletar notícias de economia e investimentos
 palavras_chave = [
-    'futebol', 'basquete', 'mma', 'campeonato', 'campeão', 'jogos', 'pontos', 'gols', 'lesão'
+    'futebol', 'gol', 'pontos', 'campeonato', 'campeão', 'jogos', 'pontos', 'gols', 'lesão', 'São Paulo', 'Corinthians', 
+    'Flamengo', 'Palmeiras', 'Cruzeiro', 'Atletico Mineiro', 'Fluminense', 'Serie A', 'Serie B', 'Serie C', 'Base',
+    'Vasco', 'Ceilandia', 'Candangão', 'Samambaia', 'Brasiliense', 'Mirasol' 
 ]
 
 headers = {'User-Agent': 'Mozilla/5.0'}
@@ -48,7 +50,7 @@ noticias_unicas = list({n["titulo"]: n for n in noticias}.values())
 # Salvar CSV
 df = pd.DataFrame(noticias_unicas)
 
-print(f"✅ CSV gerado com {len(df)} notícias: noticias_investimentos.csv")
+print(f"✅ CSV gerado com {len(df)} notícias: noticias_esportes.csv")
 
 df.to_csv("../data/noticias_esportes.csv", index=False, encoding="utf-8-sig")
 

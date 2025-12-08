@@ -1,6 +1,42 @@
+
+
+
+
+
+import pandas as pd
+
+url = "https://www.espn.com.br/futebol/classificacao"
+
+tabelas = pd.read_html(url)
+    
+
+    
+# Extrair Posição, Sigla e Nome do Time
+extracted_data = tabelas[0]['2025'].str.extract(r'^(\d+)([A-Z]{3})(.*)')
+
+# Criar um novo DataFrame para os times
+df_times = pd.DataFrame({
+    'Posição': extracted_data[0].astype(int),
+    'Sigla': extracted_data[1],
+    'Time': extracted_data[2].str.strip() # Remover espaços em branco no início/fim do nome do time
+})
+
+tabela_final = pd.concat([df_times, tabelas[1]], axis = 1)
+
+tabela_final.to_csv('../data/tabela_serie_A.csv', index=False)
+
+print("--- Tabela do Campeonato Brasileiro Série A ---")
+
+
+
+
+
+'''
 import requests
 import pandas as pd 
 import os 
+from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
@@ -79,4 +115,6 @@ print("--- Tabela do Campeonato Brasileiro Série A ---")
 
 #print("\nColunas: Pts=Pontos, JJ=Jogos Jogados, V=Vitórias, E=Empates, D=Derrotas, GP=Gols Pro, GC=Gols Contra, SG=Saldo de Gols.")
 
-df.to_csv('../data/tabela_serie_A')
+df.to_csv('../data/tabela_serie_A.csv')
+
+'''
