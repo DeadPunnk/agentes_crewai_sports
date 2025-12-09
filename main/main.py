@@ -3,7 +3,7 @@
 import os
 
 print("📋 Tabela da serie A...")
-os.system("python scripts/tabela_serie_A.py")
+os.system("python scripts/tabela_serie_a.py")
 
 print("📰 Executando coleta de notícias sobre esportes...")
 os.system("python scripts/noticias.py")
