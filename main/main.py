@@ -12,4 +12,4 @@ print("🧠 Executando análise dos agentes econômicos (CrewAI)...")
 os.system("python scripts/agentes.py")
 
 print("🚀 Iniciando dashboard Streamlit...")
-os.system("streamlit run streamlit/dashboard.py")
+os.system("streamlit run scripts/dashboard.py")
