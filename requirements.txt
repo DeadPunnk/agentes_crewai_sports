@@ -5,6 +5,8 @@ beautifulsoup4
 python-dotenv
 openai
 crewai
+crewai-tools
 langchain
 langchain-openai
 langchain-community
+google-search-results
