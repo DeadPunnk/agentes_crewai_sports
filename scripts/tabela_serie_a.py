@@ -23,7 +23,7 @@ df_times = pd.DataFrame({
 
 tabela_final = pd.concat([df_times, tabelas[1]], axis = 1)
 
-tabela_final.to_csv('../data/tabela_serie_A.csv', index=False)
+tabela_final.to_csv('data/tabela_serie_A.csv', index=False)
 
 print("--- Tabela do Campeonato Brasileiro Série A ---")
 
