@@ -93,22 +93,22 @@ redator_de_relatorios_esportivos= Agent(
 
 tarefa_analise_cenario = Task(
     description=(
-        "1. Analise os dados das partidas realizadsa no campeonato brasileiro\n"
+        "1. Analise os dados das partidas realizadsa no campeonato brasileiro 2025\n"
         "2. Revise as 'Notícias de esportes (do CSV)' para capturar o sentimento e os eventos atuais do mercado.\n"
         "3. Utilize a ferramenta SerPerDevTool para buscar informações atualizadas (últimos 1-3 meses) sobre: "
-        "a) Perspectivas para os times do campeonato. "
+        "a) Perspectivas para os times do campeonato nos proximos anos. "
         "b) Principais indicações sobre o desempenho do time. "
-        "c) Notícias relevantes sobre o campeonato brasileiro que possa impactar os rsultados e os times.\n"
-        "4. Sintetize essas informações para construir um panorama do cenário do campeonato brasileiro atual e suas implicações para os proximos anos.\n\n"
+        "c) Notícias relevantes sobre o campeonato brasileiro 2025 que possa impactar os rsultados e os times.\n"
+        "4. Sintetize essas informações para construir um panorama do cenário do campeonato brasileiro atual e suas implicações para os proximos anos, indicanco quem é o favorito para ganhar a competição.\n\n"
     ),
     expected_output=(
         "Um relatório conciso sobre o cenário do campeonato brasileiro, destacando: \n"
-        "- Análise da trajetória recente dos principais times da serie A.\n"
-        "- Principais notícias e eventos do campeonato (do CSV e da pesquisa online).\n"
+        "- Análise da trajetória recente dos principais times da serie A de 2025.\n"
+        "- Principais notícias e eventos do campeonato brasileiro 2025 (do CSV e da pesquisa online).\n"
         "- Impactos esperados desse cenário no futebol brasileiro em geral."
     ),
     agent=analista_esportivo,
-    context=[contexto_tabela_serie_a]
+    #context=[contexto_tabela_serie_a]
 )
 
 tarefa_indicacao = Task(

@@ -11,7 +11,7 @@ palavras_chave = [
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 sites = {
-    'DF Esportes': 'https://dfesportes.com/',
+    'UOL Esportes': 'https://www.uol.com.br/esporte/',
     'Globo Esporte': 'https://ge.globo.com/',
     'ESPN': 'https://www.espn.com.br',
     'SBT Sportes': 'https://sports.sbt.com.br/'
