@@ -2,6 +2,10 @@
 
 import os
 
+
+print("🚀 Iniciando dashboard Streamlit...")
+os.system("streamlit run scripts/dashboard.py")
+
 print("📋 Tabela da serie A...")
 os.system("python scripts/tabela_serie_a.py")
 
